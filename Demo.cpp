@@ -33,7 +33,7 @@ int main() {
     
     cout << "Dijkstra from 0 to 3:" << endl;
     vector<int> dijkstra = algos::Algorithms::Dijkstra(g, 0, 3); 
-    Algorithms::print_algorithm_result(dijkstra) // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
+    Algorithms::print_algorithm_result(dijkstra, true) // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
         
     cout << algos::Algorithms::hasCycle(g) << endl; // Should print true
     
