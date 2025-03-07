@@ -1,6 +1,7 @@
 #include "graph.hpp"
 #include "algorithms.hpp"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 using namespace algo;
