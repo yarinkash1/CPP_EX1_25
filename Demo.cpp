@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-
+using namespace algo;
 int main() {
     graphs::Graph g(5); 
     g.addEdge(0, 1, 1);
@@ -24,14 +24,17 @@ int main() {
     */
     
     cout << "BFS starting from vertex 0:" << endl;
-    algos::Algorithms::BFS(g, 0); // Should print 0 4 1 3 2 
+    vector<int> bfs = Algorithms::BFS(g, 0); 
+    Algorithms::print_algorithm_result(bfs) // Should print 0 4 1 3 2 
     
     cout << "DFS starting from vertex 0:" << endl;
-    algos::Algorithms::DFS(g, 0); // Should print 0 4 3 2 1
+    vector<int> dfs = algos::Algorithms::DFS(g, 0); 
+    Algorithms::print_algorithm_result(dfs) // Should print 0 4 3 2 1
     
     cout << "Dijkstra from 0 to 3:" << endl;
-    algos::Algorithms::Dijkstra(g, 0, 3); // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
-    
+    vector<int> dijkstra = algos::Algorithms::Dijkstra(g, 0, 3); 
+    Algorithms::print_algorithm_result(dijkstra) // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
+        
     cout << algos::Algorithms::hasCycle(g) << endl; // Should print true
     
     return 0;
