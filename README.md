@@ -15,6 +15,9 @@
 במטלה הזאת תייצגו גרף בעזרת **רשימת שכנויות** - https://en.wikipedia.org/wiki/Adjacency_list 
 
 
+</div>
+<div dir="rtl">
+
 
 * ממשו את שתי המחלקות הבאות:
 
