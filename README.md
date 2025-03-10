@@ -27,7 +27,7 @@
 
 גרפים הם חלק בלתי נפרד ממדעי המחשב. במהלך הלימודים נחשפתם לדרכים שונות לייצוג של גרפים (מטריצת שכנויות, רשימת שכנויות ועוד).
 
-במטלה זו תייצגו גרף בעזרת **רשימת שכנויות** – [Adjacency List](https://en.wikipedia.org/wiki/Adjacency_list).
+במטלה זו תממשו גרף באמצעות **רשימת שכנויות** – [Adjacency List](https://en.wikipedia.org/wiki/Adjacency_list).
 
 ---
 
