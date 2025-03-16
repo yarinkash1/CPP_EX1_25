@@ -1,13 +1,12 @@
 #include "graph.hpp"
 #include "algorithms.hpp"
-#include "linkedlist.hpp"
 #include <iostream>
 #include <vector>
 
 using namespace std;
 using namespace algo;
 int main() {
-    graphs::Graph g(5); 
+    graph::Graph g(5); 
     g.addEdge(0, 1, 1);
     g.addEdge(0, 4, 1);
     g.addEdge(1, 2, 1);
@@ -26,18 +25,21 @@ int main() {
     */
     
     cout << "BFS starting from vertex 0:" << endl;
-    LinkedList bfs = Algorithms::bfs_scan(g, 0); 
-    Algorithms::print_algorithm_result(bfs) // Should print 0 4 1 3 2 
+    graph::Graph* bfs = Algorithms::bfs_scan(g, 0); 
+    bfs->print_graph() // Should print 0 4 1 3 2 
     
     cout << "DFS starting from vertex 0:" << endl;
-    LinkedList dfs = algos::Algorithms::dfs_scan(g, 0); 
-    Algorithms::print_algorithm_result(dfs) // Should print 0 4 3 2 1
+    graph::Graph* dfs = algos::Algorithms::dfs_scan(g, 0); 
+    dfs->print_graph() // Should print 0 4 3 2 1
     
     cout << "Dijkstra from 0 to 3:" << endl;
-    LinkedList dijkstra = algos::Algorithms::dijkstra_path(g, 0, 3); 
-    Algorithms::print_algorithm_result(dijkstra, true) // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
+    graph::Graph* dijkstra = algos::Algorithms::dijkstra_path(g, 0, 3); 
+    dijkstra->print_graph() // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
         
     cout << algos::Algorithms::has_cycle(g) << endl; // Should print true
-    
+
+    delete bfs;
+    delete dfs;
+    delete dijkstra;
     return 0;
 }
