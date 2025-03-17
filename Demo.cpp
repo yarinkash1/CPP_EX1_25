@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace std;
-using namespace algo;
+using namespace graph;
 int main() {
     graph::Graph g(5); 
     g.addEdge(0, 1, 1);
@@ -29,14 +29,14 @@ int main() {
     bfs->print_graph() // Should print 0 4 1 3 2 
     
     cout << "DFS starting from vertex 0:" << endl;
-    graph::Graph* dfs = algos::Algorithms::dfs_scan(g, 0); 
+    graph::Graph* dfs = Algorithms::dfs_scan(g, 0); 
     dfs->print_graph() // Should print 0 4 3 2 1
     
     cout << "Dijkstra from 0 to 3:" << endl;
-    graph::Graph* dijkstra = algos::Algorithms::dijkstra_path(g, 0, 3); 
+    graph::Graph* dijkstra = Algorithms::dijkstra_path(g, 0, 3); 
     dijkstra->print_graph() // Should print something like: Shortest path from 0 to 3 is: 0->4->3 with weight 2
         
-    cout << algos::Algorithms::has_cycle(g) << endl; // Should print true
+    cout << Algorithms::has_cycle(g) << endl; // Should print true
 
     delete bfs;
     delete dfs;
