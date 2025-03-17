@@ -1,11 +1,11 @@
+#include <iostream>
 #include "graph.hpp"
 #include "algorithms.hpp"
-#include <iostream>
-#include <vector>
 
 using namespace std;
-using namespace graph;
 int main() {
+    using namespace graph;
+
     graph::Graph g(5); 
     g.addEdge(0, 1, 1);
     g.addEdge(0, 4, 1);
