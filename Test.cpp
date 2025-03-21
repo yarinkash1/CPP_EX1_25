@@ -6,7 +6,7 @@ using namespace std;
 
 TEST_CASE("Example")
 {
-    graphs::Graph g(5); 
+    graph::Graph g(5); 
     g.addEdge(0, 1, 1);
     g.addEdge(0, 4, 1);
     g.addEdge(1, 2, 1);
