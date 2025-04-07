@@ -8,6 +8,9 @@ all: $(TARGET)
 
 test: $(TEST_TARGET)
 
+main: $(TARGET)
+	./$(TARGET)
+
 $(TARGET): main.o Graph.o Node.o Queue.o Stack.o Algorithms.o MinHeap.o Pair.o UnionFind.o
 	$(CXX) $(CXXFLAGS) -o $(TARGET) main.o Graph.o Node.o Queue.o Stack.o Algorithms.o MinHeap.o Pair.o UnionFind.o
 
@@ -53,4 +56,4 @@ valgrind: $(TARGET)
 clean:
 	rm -f *.o main_exe test_exe
 
-.PHONY: all clean valgrind
+.PHONY: all clean valgrind main
