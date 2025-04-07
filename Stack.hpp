@@ -6,20 +6,19 @@ using namespace std;
 
 #define SIZE 100
 
-class Queue 
+class Stack 
 {
 private:
-    int front;
-    int rear;
+    int top;
     int arr[SIZE];
 
 public:
-    Queue();
+    Stack();
 
     bool isEmpty() const;
     bool isFull() const;
     int peek() const;
 
-    void enqueue(int value);
-    int dequeue();
+    void push(int value);
+    int pop();
 };

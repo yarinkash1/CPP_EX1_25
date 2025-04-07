@@ -1,3 +1,4 @@
+// yarinkash1@gmail.com
 #include "Node.hpp"
 
 Node::Node(int vertex, int weight = 1) : vertex(vertex), weight(weight), next(nullptr) {} // Initializer List Constructor

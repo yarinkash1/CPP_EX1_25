@@ -1,5 +1,11 @@
+// yarinkash1@gmail.com
 #include "MinHeap.hpp"
 
+    MinHeap::MinHeap()
+    {
+        size=0;
+    }
+    
     void MinHeap::heapifyUp(int index)
     {
         while (index > 0) // Continue until root
@@ -44,23 +50,18 @@
         }
     }
 
-    void MinHeap::swap(pair<int, int> &a, pair<int, int> &b)
+    void MinHeap::swap(Pair &a, Pair &b)
     {
-        pair<int, int> temp = a;
+        Pair temp = a;
         a=b;
         b=temp;
-    }
-
-    MinHeap::MinHeap()
-    {
-        size=0;
     }
 
     void MinHeap::insert(int distance, int vertex)
     {
         if (isFull()==true) 
         {
-            throw std::runtime_error("Heap is full");
+            cout << "Heap is full" << endl;
         }
     
         heap[size] = {distance, vertex}; // Store pair (distance, vertex)
@@ -68,14 +69,14 @@
         size++;             // Increase heap size
     }
 
-    pair<int, int> MinHeap::extractMin()
+    Pair MinHeap::extractMin()
     {
         if (isEmpty()) 
         {
-            throw std::runtime_error("Heap is empty"); // Handle empty heap
+            cout << "Heap is empty" << endl; // Handle empty heap
         }
     
-        pair<int, int> minValue = heap[0]; // Get min element (smallest distance)
+        Pair minValue = heap[0]; // Get min element (smallest distance)
         heap[0] = heap[size - 1]; // Move the last element to the root
         size--; // Decrease the size of the heap
     
@@ -84,11 +85,11 @@
         return minValue;
     }
 
-    pair<int, int> MinHeap::peek() const
+    Pair MinHeap::peek() const
     {
         if (isEmpty()==true) 
         {
-            throw std::runtime_error("Heap is empty");
+            cout << "Heap is empty" << endl;
         }
         return heap[0];
     }

@@ -1,7 +1,8 @@
+// yarinkash1@gmail.com
 #pragma once
 
 #include <iostream>
-#include <utility> // For std::pair
+#include "Pair.hpp"
 
 using namespace std;
 
@@ -10,18 +11,18 @@ using namespace std;
 class MinHeap
 {
 private:
-    pair<int, int> heap[SIZE]; //  (distance, vertex) - Fixed-size array for heap storage
-    int size;       // Number of elements in the heap
+    Pair heap[SIZE]; // (distance, vertex) - Fixed-size array for heap storage
+    int size; // Number of elements in the heap
     
     void heapifyUp(int index);
     void heapifyDown(int index);
-    void swap(pair<int, int> &a, pair<int, int> &b);
+    void swap(Pair &a, Pair &b);
 
 public:
     MinHeap(); // Constructor
     void insert(int distance, int vertex);
-    pair<int, int> extractMin();
-    pair<int, int> peek() const;
+    Pair extractMin();
+    Pair peek() const;
     bool isEmpty() const;
     bool isFull() const;
     void printHeap() const;
