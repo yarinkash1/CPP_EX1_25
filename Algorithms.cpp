@@ -158,7 +158,7 @@ Graph Algorithms::dijkstra(const Graph &g, int src_vtx)
 
     if (hasNegativeWeight(g) == true)
     {
-        std::cerr << "Error: Graph contains negative weight edges. Dijkstra's algorithm cannot be used." << std::endl;
+        cout << "Error: Graph contains negative weight edges. Dijkstra's algorithm cannot be used." << endl;
         return Graph(g.getNumVertices()); // Return an empty graph
     }
 
